@@ -1,0 +1,15 @@
+<div style="text-align:center" *ngIf="countryData$ | async; let country">
+    <button onClick="history.back()" class="btn success">
+        <span class="fa fa-arrow-left"></span>
+         Back
+    </button>
+
+    <h3>{{ country.name.common}}</h3>
+    <img [src]="country.flags.png" />
+    <div class="desc">Population: {{country.population | number: '1.0'}}</div>
+    <div class="desc">Region: {{ country.region}} </div>
+    <div class="desc">Sub Region: {{ country.subregion}} </div>
+    <div class="desc">Capital: {{ country.capital}} </div>
+    <div class="desc">Area: {{ country.area | number: '1.0'}} </div>
+    <div class="desc">UN Member: {{ country.unMember}} </div>
+</div>

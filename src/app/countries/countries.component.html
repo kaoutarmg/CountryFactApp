@@ -1,0 +1,21 @@
+<div style="text-align:right">
+    <button (click)='sortAscending()' class="btn success">Sort Ascending</button>
+    <button (click) = 'sortDescending()' class="btn success">Sort Descending</button>
+    <button (click) = 'getRandomCountry()' class="btn success"  [routerLink]="'/'+getRandomCountry()">Get Random Country {{myRandomCountry}}</button>
+</div>
+<div style ="text-align:left" class="search">
+    <div class="search">
+        <input type="text" placeholder="Search for a country..." [(ngModel)]="countryFilter" class="searchTerm" />
+    </div>
+</div>
+<div style="text-align:center">
+    <div class="gallery" *ngFor="let country of countries">
+     <div>
+         <img [src]="country.flags.png" width="300" height="200">
+         <h3 class="colorBlue" [routerLink]="'/'+country.name.common" >{{ country.name.common}}</h3>
+         <div class="desc">Population: {{country.population | number: '1.0'}}</div>
+         <div class="desc">Region: {{ country.region}} </div>
+         <div class="desc">Capital: {{ country.capital}} </div>
+     </div>
+    </div>
+</div>

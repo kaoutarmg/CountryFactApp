@@ -1,0 +1,11 @@
+.desc {
+    padding: 5px;
+    font-weight: 300;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.backgroundColor{
+    background-color: whitesmoke;
+    border: 1px solid #777;
+}
+.success {color: green;}
