@@ -45,7 +45,8 @@ export class CountriesComponent implements OnInit {
    }
 
    getRandomCountry(){
-    return this.source[Math.floor(Math.random() * this.source.length)].name.common
+    return this.route.params.subscribe( params => {
+      this.myRandomCountry= this.source[Math.floor(Math.random() * this.source.length)].name.common;})
    }
 
 }
